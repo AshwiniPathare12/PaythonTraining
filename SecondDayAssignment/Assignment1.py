@@ -38,3 +38,9 @@ def test_login_myntra():
     click_on_new_arrival= driver.find_element(by='xpath',value='//a[text()="Newest Arrivals"]')
     click_on_new_arrival.click()
     time.sleep(5)
+
+    actual_result= driver.find_element(by='xpath',value='//span[contains(text(),"Friday 18 October")]')
+    expected_result="Friday 18 October"
+
+    assert actual_result.text == expected_result
+    time.sleep(5)
